@@ -1,3 +1,8 @@
+variable "enabled" {
+  description = "The boolean flag whether this execution is enabled or not. No execution when set to false."
+  type        = bool
+}
+
 variable "name" {
   description = "About this name."
   type        = string
