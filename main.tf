@@ -6,7 +6,7 @@ resource "aws_ecs_service" "this" {
   name            = var.name
   cluster         = var.cluster_name
   task_definition = data.aws_ecs_task_definition.this.id
-  desired_count   = 1
+  desired_count   = var.enabled ? 1 : 0
   launch_type     = "FARGATE"
 
   network_configuration {
