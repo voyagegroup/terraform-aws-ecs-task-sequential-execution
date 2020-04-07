@@ -14,9 +14,4 @@ resource "aws_ecs_service" "this" {
     subnets          = var.subnets
     assign_public_ip = var.assign_public_ip
   }
-
-  // wait for task definition
-  provisioner "local-exec" {
-    command = "sleep 10"
-  }
 }
