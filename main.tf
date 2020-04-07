@@ -14,4 +14,8 @@ resource "aws_ecs_service" "this" {
     subnets          = var.subnets
     assign_public_ip = var.assign_public_ip
   }
+
+  provisioner "local-exec" {
+    command = "aws ecs update-service --cluster ${aws_ecs_service.this.cluster} --service ${aws_ecs_service.this.name} --task-definition ${data.aws_ecs_task_definition.this.id} --force-new-deployment"
+  }
 }
