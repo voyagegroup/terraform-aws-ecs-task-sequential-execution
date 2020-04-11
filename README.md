@@ -1,5 +1,9 @@
 # terraform-ecs-task-sequential-execution
 
+![Terraform](https://github.com/voyagegroup/terraform-aws-ecs-task-sequential-execution/workflows/Terraform/badge.svg)
+
+[Terraform Registry](https://registry.terraform.io/modules/voyagegroup/ecs-task-sequential-execution/aws/0.0.2)
+
 A terraform module to set up your ECS task the sequential execution.
 
 ![](https://raw.githubusercontent.com/voyagegroup/terraform-aws-ecs-task-sequential-execution/master/docs/draw-io.png)
