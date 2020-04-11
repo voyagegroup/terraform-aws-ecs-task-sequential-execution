@@ -1,4 +1,4 @@
-data "aws_iam_policy_document" "assume_role_policy" {
+data aws_iam_policy_document assume_role_policy {
   statement {
     actions = ["sts:AssumeRole"]
 
@@ -9,12 +9,12 @@ data "aws_iam_policy_document" "assume_role_policy" {
   }
 }
 
-resource "aws_iam_role" "this" {
+resource aws_iam_role this {
   name               = var.name
   assume_role_policy = data.aws_iam_policy_document.assume_role_policy.json
 }
 
-resource "aws_iam_role_policy_attachment" "attachment_" {
+resource aws_iam_role_policy_attachment ecs_task_execution_policy {
   role       = aws_iam_role.this.id
   policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
 }
