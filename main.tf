@@ -14,6 +14,8 @@ resource "aws_ecs_service" "this" {
     subnets          = var.subnets
     assign_public_ip = var.assign_public_ip
   }
+
+  tags = var.tags
 }
 
 resource "null_resource" "update-service" {

@@ -34,3 +34,9 @@ variable "assign_public_ip" {
   type        = bool
   default     = false
 }
+
+variable "tags" {
+  description = "A map of tags to add to all resources"
+  type        = map(string)
+  default     = {}
+}
