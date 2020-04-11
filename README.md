@@ -1,3 +1,13 @@
+# terraform-ecs-task-sequential-execution
+
+A terraform module to set up your ECS task the sequential execution.
+
+![](./docs/draw-io.png)
+
+## Usage
+
+[examples](./examples)
+
 ## Requirements
 
 | Name | Version |
