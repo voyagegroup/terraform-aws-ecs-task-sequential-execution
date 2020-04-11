@@ -37,5 +37,6 @@ A terraform module to set up your ECS task the sequential execution.
 
 | Name | Description |
 |------|-------------|
-| ecs\_service\_name | n/a |
+| ecs\_service\_name | ecs service name. |
+
 
