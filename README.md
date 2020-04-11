@@ -2,11 +2,11 @@
 
 A terraform module to set up your ECS task the sequential execution.
 
-![](./docs/draw-io.png)
+![](https://raw.githubusercontent.com/voyagegroup/terraform-aws-ecs-task-sequential-execution/master/docs/draw-io.png)
 
 ## Usage
 
-[examples](./examples)
+[examples](https://github.com/voyagegroup/terraform-aws-ecs-task-sequential-execution/tree/master/examples)
 
 ## Requirements
 
@@ -37,5 +37,6 @@ A terraform module to set up your ECS task the sequential execution.
 
 | Name | Description |
 |------|-------------|
-| ecs\_service\_name | n/a |
+| ecs\_service\_name | ecs service name. |
+
 
