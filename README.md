@@ -1,16 +1,16 @@
-# terraform-ecs-task-sequential-execution
+# terraform-aws-ecs-fargate-task-sequential-execution
 
-![Terraform](https://github.com/voyagegroup/terraform-aws-ecs-task-sequential-execution/workflows/Terraform/badge.svg)
+![Terraform](https://github.com/voyagegroup/terraform-aws-ecs-fargate-task-sequential-execution/workflows/Terraform/badge.svg)
 
-[Terraform Registry](https://registry.terraform.io/modules/voyagegroup/ecs-task-sequential-execution/aws/0.0.2)
+[Terraform Registry](https://registry.terraform.io/modules/voyagegroup/ecs-fargate-task-sequential-execution/aws)
 
 A terraform module to set up your ECS task the sequential execution.
 
-![](https://raw.githubusercontent.com/voyagegroup/terraform-aws-ecs-task-sequential-execution/master/docs/draw-io.png)
+![](https://raw.githubusercontent.com/voyagegroup/terraform-aws-ecs-fargate-task-sequential-execution/master/docs/draw-io.png)
 
 ## Usage
 
-[examples](https://github.com/voyagegroup/terraform-aws-ecs-task-sequential-execution/tree/master/examples)
+[examples](https://github.com/voyagegroup/terraform-aws-ecs-fargate-task-sequential-execution/tree/master/examples)
 
 ## Requirements
 
