@@ -17,13 +17,3 @@ resource aws_ecs_service this {
 
   tags = var.tags
 }
-
-resource null_resource update_service {
-  triggers = {
-    task_definition_arn = data.aws_ecs_task_definition.this.id
-  }
-
-  provisioner local-exec {
-    command = "aws ecs update-service --cluster ${aws_ecs_service.this.cluster} --service ${aws_ecs_service.this.name} --task-definition ${data.aws_ecs_task_definition.this.id} --force-new-deployment"
-  }
-}
