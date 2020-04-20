@@ -1,5 +1,5 @@
 locals {
-  task_definition = var.ecs_task_definetion_family_revision == null ? var.ecs_task_definetion_family : "${var.ecs_task_definetion_family}:${var.ecs_task_definetion_family_revision}"
+  task_definition = var.ecs_task_definition_family_revision == null ? var.ecs_task_definition_family : "${var.ecs_task_definition_family}:${var.ecs_task_definition_family_revision}"
 }
 
 resource aws_ecs_service this {
