@@ -41,12 +41,6 @@ variable assign_public_ip {
   default     = false
 }
 
-variable ignore_changes_in_ecs_service {
-  description = "Specify which attributes you want to ignore in ecs service"
-  type = list(string)
-  default = ["task_definition"]
-}
-
 variable tags {
   description = "A map of tags to add to all resources"
   type        = map(string)
