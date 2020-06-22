@@ -1,11 +1,7 @@
-locals {
-  task_definition = var.ecs_task_definition_family_revision == null ? var.ecs_task_definition_family : "${var.ecs_task_definition_family}:${var.ecs_task_definition_family_revision}"
-}
-
 resource aws_ecs_service this {
   name            = var.name
   cluster         = var.cluster_name
-  task_definition = local.task_definition
+  task_definition = var.ecs_task_definition_family
   desired_count   = var.enabled ? 1 : 0
   launch_type     = "FARGATE"
 
