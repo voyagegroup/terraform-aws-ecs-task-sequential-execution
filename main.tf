@@ -15,9 +15,5 @@ resource aws_ecs_service this {
     assign_public_ip = var.assign_public_ip
   }
 
-  lifecycle {
-    ignore_changes = var.ignore_changes_in_ecs_service
-  }
-
   tags = var.tags
 }

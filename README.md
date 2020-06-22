@@ -36,7 +36,6 @@ A terraform module to set up your ECS task the sequential execution.
 | assign\_public\_ip | Choose whether to have your tasks receive a public IP address. If you are using Fargate tasks, in order for the task to pull the container image it must either use a public subnet and be assigned a public IP address or a private subnet that has a route to the internet or a NAT gateway that can route requests to the internet. | `bool` | `false` | no |
 | ecs\_task\_definition\_family\_revision | ECS Fargate Task Definition family revision. | `string` | `null` | no |
 | enabled | The boolean flag whether this execution is enabled or not. No execution when set to false. | `bool` | `true` | no |
-| ignore\_changes\_in\_ecs\_service | Specify which attributes you want to ignore in ecs service | `list(string)` | <pre>[<br>  "task_definition"<br>]</pre> | no |
 | tags | A map of tags to add to all resources | `map(string)` | `{}` | no |
 
 ## Outputs
