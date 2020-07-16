@@ -3,7 +3,7 @@ resource aws_ecs_service this {
   cluster         = var.cluster_name
   task_definition = var.ecs_task_definition_family
   desired_count   = var.enabled ? 1 : 0
-  launch_type     = "FARGATE"
+  launch_type     = var.ecs_launch_type
 
   network_configuration {
     security_groups  = var.security_groups

@@ -14,6 +14,12 @@ variable cluster_name {
   type        = string
 }
 
+variable ecs_launch_type {
+  description = "ECS task launch type."
+  type        = string
+  default     = "FARGATE"
+}
+
 variable ecs_task_definition_family {
   description = "ECS Fargate Task Definition family."
   type        = string

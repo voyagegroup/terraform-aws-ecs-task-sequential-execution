@@ -34,6 +34,7 @@ A terraform module to set up your ECS task the sequential execution.
 | security\_groups | Specify the security groups to attach. | `list(string)` | n/a | yes |
 | subnets | Specify the subnet on which to run ECS Fargate. | `list(string)` | n/a | yes |
 | assign\_public\_ip | Choose whether to have your tasks receive a public IP address. If you are using Fargate tasks, in order for the task to pull the container image it must either use a public subnet and be assigned a public IP address or a private subnet that has a route to the internet or a NAT gateway that can route requests to the internet. | `bool` | `false` | no |
+| ecs\_launch\_type | ECS task launch type. | `string` | `"FARGATE"` | no |
 | enabled | The boolean flag whether this execution is enabled or not. No execution when set to false. | `bool` | `true` | no |
 | tags | A map of tags to add to all resources | `map(string)` | `{}` | no |
 
