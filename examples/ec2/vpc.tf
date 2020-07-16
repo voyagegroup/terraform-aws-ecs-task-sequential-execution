@@ -2,12 +2,15 @@ module vpc {
   source  = "terraform-aws-modules/vpc/aws"
   version = "2.44.0"
 
-  name               = var.name
-  cidr               = "10.0.0.0/16"
-  azs                = var.vpc_azs
-  public_subnets     = ["10.0.101.0/24"]
-  private_subnets    = ["10.0.104.0/24"]
-  enable_nat_gateway = true
+  name            = var.name
+  cidr            = "10.0.0.0/16"
+  azs             = var.vpc_azs
+  public_subnets  = ["10.0.101.0/24"]
+  private_subnets = ["10.0.104.0/24"]
+
+  enable_nat_gateway   = true
+  enable_dns_hostnames = true
+  enable_dns_support   = true
 }
 
 resource aws_security_group this {
