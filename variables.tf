@@ -22,8 +22,8 @@ variable ecs_launch_type {
 
 variable "ecs_fargate_platform_version" {
   description = "ECS Fargate platform versions"
-  type = string
-  default = "LATEST"
+  type        = string
+  default     = "LATEST"
 }
 
 variable ecs_task_definition_family {
