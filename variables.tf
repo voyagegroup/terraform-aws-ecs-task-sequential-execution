@@ -10,7 +10,7 @@ variable enabled {
 }
 
 variable cluster_name {
-  description = "ECS Fargate Cluster name."
+  description = "ECS Cluster name."
   type        = string
 }
 
@@ -18,6 +18,12 @@ variable ecs_launch_type {
   description = "ECS task launch type."
   type        = string
   default     = "FARGATE"
+}
+
+variable "ecs_fargate_platform_version" {
+  description = "ECS Fargate platform versions"
+  type = string
+  default = "LATEST"
 }
 
 variable ecs_task_definition_family {
