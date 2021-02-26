@@ -4,7 +4,7 @@ resource "aws_ecs_service" "this" {
   task_definition  = var.ecs_task_definition_family
   desired_count    = var.enabled ? 1 : 0
   launch_type      = var.ecs_launch_type
-  platform_version = var.ecs_launch_type ? "FARGATE" : var.ecs_fargate_platform_version
+  platform_version = var.ecs_launch_type == "FARGATE" ? var.ecs_fargate_platform_version : null
 
   network_configuration {
     security_groups  = var.security_groups
