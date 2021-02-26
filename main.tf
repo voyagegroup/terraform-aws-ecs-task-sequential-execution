@@ -1,4 +1,4 @@
-resource aws_ecs_service this {
+resource "aws_ecs_service" "this" {
   name            = var.name
   cluster         = var.cluster_name
   task_definition = var.ecs_task_definition_family
