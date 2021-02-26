@@ -1,9 +1,9 @@
-resource aws_ecs_service this {
-  name             = var.name
-  cluster          = var.cluster_name
-  task_definition  = var.ecs_task_definition_family
-  desired_count    = var.enabled ? 1 : 0
-  launch_type      = var.ecs_launch_type
+resource "aws_ecs_service" "this" {
+  name            = var.name
+  cluster         = var.cluster_name
+  task_definition = var.ecs_task_definition_family
+  desired_count   = var.enabled ? 1 : 0
+  launch_type     = var.ecs_launch_type
   platform_version = var.ecs_launch_type ? "FARGATE" : var.ecs_fargate_platform_version
 
   network_configuration {
