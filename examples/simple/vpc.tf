@@ -1,4 +1,4 @@
-module vpc {
+module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "2.44.0"
 
@@ -10,12 +10,12 @@ module vpc {
   enable_nat_gateway = true
 }
 
-resource aws_security_group this {
+resource "aws_security_group" "this" {
   name   = var.name
   vpc_id = module.vpc.vpc_id
 }
 
-resource aws_security_group_rule this {
+resource "aws_security_group_rule" "this" {
   security_group_id = aws_security_group.this.id
   type              = "egress"
   from_port         = 0
