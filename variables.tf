@@ -20,6 +20,12 @@ variable "ecs_launch_type" {
   default     = "FARGATE"
 }
 
+variable "ecs_fargate_platform_version" {
+  description = "ECS Fargate platform versions"
+  type        = string
+  default     = "LATEST"
+}
+
 variable "ecs_task_definition_family" {
   description = "ECS Fargate Task Definition family."
   type        = string
